@@ -4,11 +4,20 @@ import { Layout } from './pages/layout/layout';
 
 export const routes: Routes = [
   {
-    path:"",
-    component: Login
+    path: 'login',
+    component: Login,
   },
+  // {
+  //   path: '',
+  //   redirectTo: '/login',
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: '**',
+  //   redirectTo: '/login',
+  // },
   {
-    path:"layout",
-    component: Layout
-  }
+    path: 'layout',
+    component: Layout,
+  },
 ];

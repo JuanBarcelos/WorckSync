@@ -4,7 +4,7 @@
     "sidebar header"
     "sidebar main";
   grid-template-columns: 30rem 1fr;
-  grid-template-rows: 8.4rem 1fr;
+  grid-template-rows: 8rem 1fr;
   height: 100vh;
 }
 
@@ -16,6 +16,6 @@ app-sidebar {
   grid-area: sidebar;
 }
 
-.content {
+router-outlet {
   grid-area: main;
 }
