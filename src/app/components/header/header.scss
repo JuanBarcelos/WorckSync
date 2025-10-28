@@ -1,0 +1,30 @@
+@use '../../variable.scss' as var;
+
+header{
+  padding-block: 2rem;
+  padding-inline: 2.4rem;
+  border-bottom: 1px solid var.$secondary-color;
+  .input-group{
+    padding-block: .6rem;
+    padding-inline: 1.2rem;
+    border: 1px solid var.$border-color;
+    border-radius: 1rem;
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    i{
+      font-size: 2rem;
+      color: var.$primary-text-color;
+    }
+    input{
+      border: none;
+      font-size: 1.4rem;
+      font-weight: normal;
+      letter-spacing: .1rem;
+      line-height: 2.4rem;
+      outline: none;
+      width: 100%;
+    }
+  }
+}
