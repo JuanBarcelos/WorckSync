@@ -16,6 +16,6 @@ app-sidebar {
   grid-area: sidebar;
 }
 
-router-outlet {
+.content {
   grid-area: main;
 }

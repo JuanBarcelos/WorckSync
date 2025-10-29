@@ -1,0 +1,21 @@
+<section>
+  <div class="dashboard-header">
+    <div class="title">
+      <h1>Olá, userName! Bem-vindo ao WorckSync</h1>
+      <h2>Gerencie os registros de ponto, turnos e funcionários em um só lugar. Tudo simples, rápido e organizado.</h2>
+      <div class="dashboard-btns">
+        <app-primary-button label="Importar Registros"></app-primary-button>
+        <app-secondary-button label="Consultar Registros"></app-secondary-button>
+      </div>
+    </div>
+    <div class="dashboard-img">
+      <img src="dashboard.svg" alt="pessoas personalizando um calendário gigante com dois relógios ao fundo">
+    </div>
+  </div>
+
+  <div class="cards">
+    @for (card of cards; track $index) {
+      <app-dashboard-card [cardData]="card"></app-dashboard-card>
+    }
+  </div>
+</section>
