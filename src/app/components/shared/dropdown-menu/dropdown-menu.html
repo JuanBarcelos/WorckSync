@@ -1,0 +1,14 @@
+<div class="menu">
+  <button class="dropdown-btn" (click)="toggleDropdown()">
+    <i [class]="dropdownOpen ? 'ph ph-text-indent' : 'ph ph-text-outdent'"></i>
+  </button>
+  @if(dropdownOpen){
+    <ul class="dropdown">
+      @for (menuOption of menuOptions; track $index) {
+        <li (click)="selectItem(menuOption)">
+          {{ menuOption }}
+        </li>
+      }
+    </ul>
+  }
+</div>

@@ -1,0 +1,100 @@
+@use '../../variable.scss' as var;
+
+.card {
+  padding: 2.4rem;
+  width: 35rem;
+  border: 2px solid var.$secondary-color;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .avatar {
+    color: var.$tertiary-color;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info {
+    flex: 1;
+    margin-left: 0.8rem;
+    color: var.$primary-text-color;
+    h3 {
+      font-weight: 700;
+      line-height: 2.4rem;
+      font-size: 1.8rem;
+    }
+    p {
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.03rem;
+    }
+  }
+}
+
+.card-body {
+  color: var.$primary-text-color;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 2.4rem;
+  padding-bottom: 0.8rem;
+  .body-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      i {
+        font-size: 2rem;
+        color: var.$primary-color;
+      }
+    }
+  }
+}
+
+.card-footer {
+  text-align: right;
+  padding-top: 0.8rem;
+  .status {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.03rem;
+    font-weight: 500;
+  }
+  .status.Ativo {
+    background: var.$primary-color;
+    color: var.$tertiary-color;
+    filter: drop-shadow(0px 2px 4px var.$primary-color);
+    box-shadow: inset 0px -8px 2px var.$primary-color;
+  }
+  .status.Ferias {
+    background: var.$status-vocation-20;
+    color: var.$secondary-text-color;
+  }
+  .status.Inativo {
+    background: var.$status-inactive-20;
+    color: var.$secondary-text-color;
+    filter: drop-shadow(0px 2px 4px var.$status-inactive);
+    box-shadow: inset 0px -8px 2px var.$status-inactive;
+  }
+}

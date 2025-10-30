@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DashboardCard, type CardData } from '../../components/dashboard-card/dashboard-card';
-import { PrimaryButton } from "../../components/primary-button/primary-button";
-import { SecondaryButton } from "../../components/secondary-button/secondary-button";
+import { PrimaryButton } from "../../components/shared/primary-button/primary-button";
+import { SecondaryButton } from "../../components/shared/secondary-button/secondary-button";
 
 @Component({
   selector: 'app-dashboard',
