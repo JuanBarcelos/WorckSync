@@ -1,6 +1,6 @@
 @use '../../../variable.scss' as var;
 
-button{
+button {
   padding-block: 1rem;
   padding-inline: 1.2rem;
 
@@ -12,9 +12,19 @@ button{
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: bold;
+  color: var.$primary-text-color;
   cursor: pointer;
 
-  &:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  i {
+    font-size: 2.4rem;
+  }
+
+  &:hover {
     background-color: var.$secondary-color;
   }
 }
