@@ -1,0 +1,29 @@
+<div class="upload-container">
+  <div class="upload-header">
+    <div class="upload-title">
+      <i class="ph ph-upload-simple"></i>
+      <h3>Carregar Dados de Ponto</h3>
+    </div>
+    <p>Suporte para Excel no formato <strong>.xlsx</strong></p>
+  </div>
+
+  <div
+    class="upload-box"
+    [class.dragover]="isDragOver"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    (drop)="onDrop($event)"
+    (click)="fileInput.click()"
+  >
+    <input #fileInput type="file" accept=".xlsx" hidden (change)="onFileSelected($event)" />
+
+    <div class="upload-content">
+      <div class="upload-icon">
+        <i class="ph ph-upload-simple"></i>
+      </div>
+      <h4>Arraste e solte sua planilha aqui</h4>
+      <p>Clique para escolher uma planilha do seu dispositivo</p>
+      <small><i class="ph ph-file-text"></i> Suporta arquivos .xlsx somente</small>
+    </div>
+  </div>
+</div>

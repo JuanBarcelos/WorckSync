@@ -4,6 +4,7 @@ import { Layout } from './pages/layout/layout';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Employees } from './pages/employees/employees';
 import { Shift } from './pages/shift/shift';
+import { DataImport } from './pages/data-import/data-import';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
       {
         path: 'shift',
         component: Shift,
+      },
+      {
+        path: 'data-imports',
+        component: DataImport,
       },
     ],
   },

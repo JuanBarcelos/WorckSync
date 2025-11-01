@@ -1,0 +1,32 @@
+<main>
+  <div class="import-header">
+    <div class="title">
+      <h1>Importar Registros de Ponto</h1>
+      <h2>Carregue seus arquivos e processe dados de funcionários com facilidade</h2>
+    </div>
+  </div>
+  @if(stats){
+    <div class="cards">
+      <div class="card" [class.blue]="true">
+        <div class="value">{{ stats.totalArquivos }}</div>
+        <div class="label">Total de Arquivos</div>
+      </div>
+
+      <div class="card" [class.green]="true">
+        <div class="value">{{ stats.importadosSucesso }}</div>
+        <div class="label">Importados com Sucesso</div>
+      </div>
+
+      <div class="card" [class.red]="true">
+        <div class="value">{{ stats.erros }}</div>
+        <div class="label">Erros ao importar</div>
+      </div>
+
+      <div class="card" [class.blue]="true">
+        <div class="value">{{ stats.totalLinhas }}</div>
+        <div class="label">Total de Linhas</div>
+      </div>
+    </div>
+  }
+  <app-input-upload (fileUploaded)="onFileUploaded($event)"></app-input-upload>
+</main>
