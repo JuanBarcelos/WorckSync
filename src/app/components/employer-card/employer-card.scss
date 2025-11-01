@@ -7,40 +7,41 @@
   border-radius: 2rem;
   overflow: hidden;
 }
-.card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .avatar {
-    color: var.$tertiary-color;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    text-transform: uppercase;
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+
+  .card-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  .info {
-    flex: 1;
-    margin-left: 0.8rem;
-    color: var.$primary-text-color;
-    h3 {
+    justify-content: space-between;
+    .avatar {
+      color: var.$tertiary-color;
       font-weight: 700;
+      font-size: 2rem;
       line-height: 2.4rem;
-      font-size: 1.8rem;
+      text-transform: uppercase;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    p {
-      font-weight: normal;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-      letter-spacing: 0.03rem;
+    .info {
+      flex: 1;
+      margin-left: 1.2rem;
+      color: var.$primary-text-color;
+      h3 {
+        font-weight: 700;
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.03rem;
+      }
     }
   }
-}
 
 .card-body {
   color: var.$primary-text-color;

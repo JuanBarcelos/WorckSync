@@ -1,0 +1,112 @@
+@use '../../variable.scss' as var;
+
+.card {
+  padding: 2.4rem;
+  width: 40rem;
+  border: 1px solid var.$secondary-color;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .avatar {
+      color: var.$tertiary-color;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .info {
+      flex: 1;
+      margin-left: 1.2rem;
+      color: var.$primary-text-color;
+      h3 {
+        font-weight: 700;
+        line-height: 2.4rem;
+        font-size: 1.8rem;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.03rem;
+      }
+    }
+  }
+
+  .card-status {
+    text-align: right;
+    padding-top: 0.8rem;
+    .status {
+      padding: .5rem 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      letter-spacing: .03rem;
+      font-weight: normal;
+    }
+    .status.Ativo {
+      background: var.$primary-color;
+      color: var.$tertiary-color;
+    }
+    .status.Ferias {
+      background: var.$status-vocation-20;
+      color: var.$secondary-text-color;
+    }
+    .status.Inativo {
+      background: var.$status-inactive-20;
+      color: var.$secondary-text-color;
+    }
+  }
+
+  .card-body{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: .03rem;
+    color: var.$primary-text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.6rem;
+    padding-top: .8rem;
+    .start-time,
+    .departure-time,
+    .lunch-time {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.2rem;
+        i {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+.start-time > p {
+  margin-left: 1.3rem;
+}
+
+.departure-time > p {
+  margin-left: 3rem;
+}
+
+.lunch-time > p {
+  margin-left: .8rem;
+}

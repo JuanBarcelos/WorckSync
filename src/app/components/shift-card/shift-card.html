@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+    <div class="avatar" [style]="{ background: avatarGradient }">
+      {{ shift.name[0] }}{{ shift.name.split(' ')[1][0] }}
+    </div>
+    <div class="info">
+      <h3>{{ shift.name }}</h3>
+      <p>{{ shift.role }}</p>
+    </div>
+
+    <!-- Dropdown -->
+    <app-dropdown-menu
+      [menuOptions]="['Editar', 'Excluir', 'Detalhes']"
+      (itemSelected)="onMenuAction($event)"
+    >
+      ></app-dropdown-menu
+    >
+  </div>
+
+  <div class="card-status">
+    <span class="status" [ngClass]="shift.status">{{ shift.status }}</span>
+  </div>
+  
+  <div class="card-body">
+    <div class="start-time">
+      <div class="icon">
+        <i class="ph ph-clock"></i>
+        <p>Entrada:</p>
+      </div>
+      <p>{{ shift.startTime }}</p>
+    </div>
+    <div class="departure-time">
+      <div class="icon">
+        <i class="ph ph-clock"></i>
+        <p>Saida:</p>
+      </div>
+      <p>{{ shift.departureTime }}</p>
+    </div>
+    <div class="lunch-time">
+      <div class="icon">
+        <i class="ph ph-coffee"></i>
+        <p>Intervalo:</p>
+      </div>
+      <p>{{ shift.lunchTime }}</p>
+    </div>
+  </div>
+</div>
